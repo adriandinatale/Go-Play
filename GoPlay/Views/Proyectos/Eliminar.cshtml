@@ -1,0 +1,27 @@
+﻿@model GoPlay.web.Models.Proyecto
+
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+<div class="text-center">
+    <h3>@ViewData["Title"]</h3>
+</div>
+
+<body style="background-color:lightgray">
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <form asp-action="Eliminar" method="post">
+        <div>
+            <input asp-for="NombreObra" type="text" class="Display-1">
+        </div>
+        <div class="text-center">
+            <button type"submit" class="btn btn-success">Eliminar</button>
+            <a href="/Proyectos/Abrir" class="btn btn-secondary">Volver</a>
+        </div>
+    </form>
+</body>

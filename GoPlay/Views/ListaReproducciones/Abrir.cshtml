@@ -1,0 +1,81 @@
+﻿@model IEnumerable<GoPlay.web.Models.ListaReproduccion>
+
+
+@{
+
+    ViewData["Title"] = "Abrir";
+}
+
+<body style="background-color:lightgray">
+
+    <div class="BotonPlay">
+        <button asp-action="Play">Play</button>
+    </div>
+    <div class="BotonStop">
+        <button asp-action="Stop">Stop</button>
+    </div>
+    <div class="BotonFF">
+        <button asp-action="FF">FF</button>
+    </div>
+    <form>
+        <div>
+            <input type="text" value="@ViewBag.DateTime" class="Display" placeholder="Timer"  readonly>
+        </div>
+        <div>
+            <input type="text" class="Display-aa" readonly>
+        </div>
+        <div>
+            <input type="hidden" value="@ViewBag.ID">
+            <input type="text" value="@ViewBag.Nombre" class="Display-3"  readonly>
+        </div>
+        <div>
+            <input type="text" value="@ViewBag.Detalle" class="Display-2a"  readonly>
+        </div>
+
+
+        <div class="Tabla">
+            <table>
+                <thead>
+                    <tr>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.ID)
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.Numero)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.ID)
+                        </td>*@
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Numero)
+                        </td>
+                        <td>
+                           <a asp-action="Mostrar" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.Nombre)</a>
+                        </td>
+                    </tr>
+                 }
+            </table>
+            <br/>
+            <br/>
+            <div class="text-center">
+                <a href="/ListaReproducciones/Crear" class="btn btn-success">Editar</a>
+                <a href="/Proyectos/Abrir" class="btn btn-secondary">Volver</a>
+            </div>
+        </div>
+    </form>
+</body>
+
+
+
+
+
+

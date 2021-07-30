@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GoPlay.web.Models.Proyecto>
+
+
+@{
+
+    ViewData["Title"] = "Abrir Proyecto";
+   <div class="text-center">
+       <h3>@ViewData["Title"]</h3>
+   </div>
+}
+
+<body style="background-color:lightgray">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div>
+        <table class="Tabla">
+           
+            @foreach (var item in Model)
+            {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td class="text-right">
+                    @Html.DisplayFor(modelItem => item.NombreObra)
+                </td>
+                <td class="text-right">
+                    <a href="/ListaReproducciones/Abrir" class="btn btn-info btn-sm">Abrir</a>
+
+                    <a asp-action="Editar" asp-route-id="@item.ID" class="btn btn-success btn-sm">Editar</a>
+
+                    <a asp-action="Eliminar" asp-route-id="@item.ID" class="btn btn-warning btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            }
+        </table>
+        <br />
+        <br />
+        <div class="text-center">
+            <a href="/Home" class="btn btn-secondary">Inicio</a>
+        </div>
+    </div>
+</body>

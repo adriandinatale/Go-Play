@@ -1,0 +1,27 @@
+﻿@model GoPlay.web.Models.ListaReproduccion
+
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+<div class="text-center">
+    <h3>@ViewData["Title"]</h3>
+</div>
+
+<body style="background-color:lightgray">
+
+    <br />
+    <br />
+
+    <form asp-action="Eliminar" method="post">
+        <div>
+            <input asp-for="Numero" type="text" class="Display-0">
+            <input asp-for="Nombre" type="text" class="Display-1">
+            <input asp-for="Detalle" type="text" class="Display-2">
+        </div>
+        <div class="text-center">
+            <button type"submit" class="btn btn-success">Eliminar</button>
+            <a href="/ListaReproducciones/Crear" class="btn btn-secondary">Volver</a>
+        </div>
+    </form>
+</body>

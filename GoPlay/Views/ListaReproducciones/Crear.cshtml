@@ -1,0 +1,82 @@
+﻿@model IEnumerable<GoPlay.web.Models.ListaReproduccion>
+
+
+@{
+
+    ViewData["Title"] = "Crear Lista Reproduccion";
+}
+
+<body style="background-color:lightgray">
+
+    <div class="BotonPlay">
+        <button asp-action="Play">Play</button>
+    </div>
+    <div class="BotonStop">
+        <button asp-action="Stop">Stop</button>
+    </div>
+    <div class="BotonFF">
+        <button asp-action="FF">FF</button>
+    </div>
+    <form asp-action="Crear" enctype="multipart/form-data" method="post">
+        <div>
+            <input type"text" class="Display" placeholder="Timer" readonly>
+        </div>
+        <div>
+            <input type="file" name="MyFile" class="Display-a">
+        </div>
+        <div class="Alinear">
+            
+            <input type="text" name="Numero" class="Display-0" placeholder=" Nº Track">
+
+            <input type="text" name="Nombre" class="Display-1" placeholder="   Nombre del Track">
+
+            <input type="text" name="Detalle" class="Display-2" placeholder="   Agregar Pie">
+        </div>
+
+        <div class="Tabla-1">
+            <table>
+                <thead>
+                    <tr>
+                        @*<th>
+                            @Html.DisplayNameFor(model => model.ID)
+                        </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.Numero)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.ID)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Numero)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>       
+                        <td class="text-right">
+                           <a asp-action="Editar" asp-route-id="@item.ID" class="btn btn-success btn-sm">Editar</a>
+
+                           <a asp-action="Eliminar" asp-route-id="@item.ID" class="btn btn-warning btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+
+                }
+            </table>
+            <br/>
+            <br/>
+
+            <div class="text-center">
+                <button type"submit" class="btn btn-success">Guardar</button>
+                <a href="/ListaReproducciones/Abrir" class="btn btn-secondary">Show</a>
+            </div>
+        </div>
+    </form>   
+</body>

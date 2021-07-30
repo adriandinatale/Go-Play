@@ -69,3 +69,225 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+.BotonPlay button {
+    position: relative;
+    top: 60px;
+    border-radius: 3px;
+    font-size: xx-large;
+    display: block;
+    width: 150px;
+    height: 110px;
+    text-align: center;
+    padding-top: 5px;
+    float: right;
+    background-color: #17a169;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 0px 10px #000;
+    text-shadow: 0px 0px 10px #000;
+}
+
+.Display {
+    position: relative;
+    top: 60px;
+    right: initial;
+    display: block;
+    width: 150px;
+    height: 110px;
+    border-radius: 3px;
+    border-color: #7fcd90;
+    box-shadow: 0px 0px 10px #7d7577;
+    text-align: center;
+    background-color: #7fcd90;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.Display-a {
+    position: relative;
+    top: -55px;
+    right: auto;
+    display: block;
+    border-radius: 3px;
+    border-color: lightgray;
+    box-shadow: 0px 0px 7px #000;
+    width: 790px;
+    height: 25px;
+    background-color: #fff;
+    font-family: Arial;
+    font-size: small;
+    margin: 5px auto;
+}
+
+.Display-aa {
+    position: relative;
+    top: -55px;
+    right: auto;
+    display: block;
+    border-radius: 3px;
+    border-color: lightgray;
+    box-shadow: 0px 0px 7px #000;
+    width: 790px;
+    height: 25px;
+    background-color: #7fcd90;
+    font-family: Arial;
+    font-size: small;
+    margin: 5px auto;
+}
+
+
+.Display-0 {
+    position: relative;
+    top: 0px;
+    right: 353px;
+    display:block;
+    border-radius: 3px;
+    border-color: lightgray;
+    box-shadow: 0px 0px 7px #000;
+    width: 85px;
+    height: 40px;
+    background-color: #fff;
+    font-family: Arial;
+    font-size: large;
+    margin: 5px auto;
+}
+
+.Display-1 {
+    position: relative;
+    top: -45px;
+    left: 45px;
+    display: block;
+    border-radius: 3px;
+    border-color: lightgray;
+    box-shadow: 0px 0px 7px #000;
+    width: 700px;
+    height: 40px;
+    background-color: #fff;
+    font-family: Arial;
+    font-size: large;
+    margin: 5px auto;
+}
+
+.Display-2 {
+    position: relative;
+    top: -45px;
+    display: block;
+    border-radius: 3px;
+    border-color: lightgray;
+    box-shadow: 0px 0px 7px #000;
+    width: 790px;
+    height: 90px;
+    float: none;
+    background-color: #fff;
+    font-family: Arial;
+    font-size: x-large;
+    margin: 5px auto;
+}
+
+.Display-2a {
+    position: relative;
+    top: -53px;
+    display: block;
+    border-radius: 3px;
+    border-color: lightgray;
+    box-shadow: 0px 0px 7px #000;
+    width: 790px;
+    height: 90px;
+    float: none;
+    background-color: #fff;
+    font-family: Arial;
+    font-size: x-large;
+    margin: 5px auto;
+}
+
+.Display-3 {
+    position: relative;
+    top: -55px;
+    display: block;
+    border-radius: 3px;
+    border-color: lightgray;
+    box-shadow: 0px 0px 7px #000;
+    width: 790px;
+    height: 40px;
+    background-color: #fff;
+    font-family: Arial;
+    font-size: large;
+    margin: 5px auto;
+}
+.Alinear{
+    position:relative;
+    top: -55px;
+
+}
+
+.BotonStop button{
+
+    position: relative;
+    top: 173px;
+    left: 150px;
+    font-size: large;
+    border-radius: 3px;
+    display: block;
+    width: 70px;
+    height: 55px;
+    float: right;
+    background-color: #d1d5ec;
+    text-align: center;
+    padding-top: 3px;
+    font-family: Arial;
+    color: black;
+    box-shadow: 0px 0px 10px #000;
+}
+    
+.BotonFF button{
+
+    position: relative;
+    top: 173px;
+    left: 140px;
+    font-size: large;
+    border-radius: 3px;
+    display: block;
+    width: 70px;
+    height: 55px;
+    float: right;
+    background-color: #ffeb63;
+    text-align: center;
+    padding-top: 3px;
+    font-family: Arial;
+    color: black;
+    box-shadow: 0px 0px 10px #000;
+}
+.Tabla {
+    margin-top: -40px;
+    
+}
+
+.Tabla-1 {
+    margin-top: -85px;
+}
+
+table {
+    background-color: #bcffbe;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    padding: 8px;
+}
+thead {
+    border-color: lightgray;
+    font-family: Arial;
+    color: black;
+    box-shadow: 0px 0px 7px #000;
+}
+tr:nth-child(even) {
+    background-color: #b0d2c7;
+}
+tr:hover td {
+    background-color: #30c88a;
+}
+
+
+
+

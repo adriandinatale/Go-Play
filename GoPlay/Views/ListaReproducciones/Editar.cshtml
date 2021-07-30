@@ -1,0 +1,30 @@
+﻿@model GoPlay.web.Models.ListaReproduccion
+
+
+@{
+    ViewData["Title"] = "Editar";
+}
+<div class="text-center">
+    <h3>@ViewData["Title"]</h3>
+</div>
+
+<body style="background-color:lightgray">
+
+    <br/>
+    <br/>
+
+    <form asp-action="Editar" method="post">
+        <div>
+            <input type="hidden" asp-for="ID">
+            <input type="hidden" asp-for="ProyectoID">
+            <input type="text" asp-for="Numero" class="Display-0" placeholder="Nuevo Nº">
+            <input type="text" asp-for="Nombre" class="Display-1" placeholder="  Nuevo Track">
+            <input type="text" asp-for="Detalle" class="Display-2" placeholder="  Nuevo Detalle">
+
+        </div>
+        <div class="text-center">
+            <button type"submit" class="btn btn-success">Guardar</button>
+            <a href="/ListaReproducciones/Crear" class="btn btn-secondary">Volver</a>
+        </div>
+    </form>
+</body>

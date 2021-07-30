@@ -14,7 +14,7 @@ namespace GoPlay.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.7");
+                .HasAnnotation("ProductVersion", "5.0.8");
 
             modelBuilder.Entity("GoPlay.Models.Usuario", b =>
                 {
@@ -95,12 +95,40 @@ namespace GoPlay.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Detalle")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Nombre")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("Pista")
+                        .HasColumnType("BLOB");
+
+                    b.Property<int>("ProyectoID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ProyectoID");
+
+                    b.ToTable("ListaReproducciones");
+                });
+
+            modelBuilder.Entity("GoPlay.web.Models.Proyecto", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("NombreObra")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ID");
 
-                    b.ToTable("ListaReproducciones");
+                    b.ToTable("Proyectos");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -235,6 +263,15 @@ namespace GoPlay.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("GoPlay.web.Models.ListaReproduccion", b =>
+                {
+                    b.HasOne("GoPlay.web.Models.Proyecto", null)
+                        .WithMany("Tracks")
+                        .HasForeignKey("ProyectoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -284,6 +321,11 @@ namespace GoPlay.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("GoPlay.web.Models.Proyecto", b =>
+                {
+                    b.Navigation("Tracks");
                 });
 #pragma warning restore 612, 618
         }
